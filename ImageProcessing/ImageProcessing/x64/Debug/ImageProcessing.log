@@ -1,4 +1,3 @@
-﻿  main.c
-D:\USTC\Program\ImageProcessing\ImageProcessing\ImageProcessing\main.c(53,21): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
-D:\USTC\Program\ImageProcessing\ImageProcessing\ImageProcessing\main.c(53,29): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+﻿  task1.c
+D:\USTC\Program\ImageProcessing\ImageProcessing\ImageProcessing\task1.c(22,63): warning C4244: “函数”: 从“double”转换到“int”，可能丢失数据
   ImageProcessing.vcxproj -> D:\USTC\Program\ImageProcessing\ImageProcessing\x64\Debug\ImageProcessing.exe
