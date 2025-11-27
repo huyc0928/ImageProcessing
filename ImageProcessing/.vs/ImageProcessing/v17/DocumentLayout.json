@@ -1,7 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\USTC\\Program\\ImageProcessing\\ImageProcessing\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E0C79A06-9C10-40FD-956B-9C9B227F57BF}|ImageProcessing\\ImageProcessing.vcxproj|D:\\USTC\\Program\\ImageProcessing\\ImageProcessing\\ImageProcessing\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E0C79A06-9C10-40FD-956B-9C9B227F57BF}|ImageProcessing\\ImageProcessing.vcxproj|solutionrelative:ImageProcessing\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +14,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main.c",
+              "DocumentMoniker": "D:\\USTC\\Program\\ImageProcessing\\ImageProcessing\\ImageProcessing\\main.c",
+              "RelativeDocumentMoniker": "ImageProcessing\\main.c",
+              "ToolTip": "D:\\USTC\\Program\\ImageProcessing\\ImageProcessing\\ImageProcessing\\main.c",
+              "RelativeToolTip": "ImageProcessing\\main.c",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAABcAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-11-26T13:11:55.535Z",
+              "EditorCaption": ""
             }
           ]
         }
