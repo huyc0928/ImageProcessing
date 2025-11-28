@@ -7,12 +7,16 @@
       "RelativeMoniker": "D:0:0:{E0C79A06-9C10-40FD-956B-9C9B227F57BF}|ImageProcessing\\ImageProcessing.vcxproj|solutionrelative:ImageProcessing\\task1.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E0C79A06-9C10-40FD-956B-9C9B227F57BF}|ImageProcessing\\ImageProcessing.vcxproj|D:\\USTC\\Program\\ImageProcessing\\ImageProcessing\\ImageProcessing\\task.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{E0C79A06-9C10-40FD-956B-9C9B227F57BF}|ImageProcessing\\ImageProcessing.vcxproj|solutionrelative:ImageProcessing\\task.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{E0C79A06-9C10-40FD-956B-9C9B227F57BF}|ImageProcessing\\ImageProcessing.vcxproj|D:\\USTC\\Program\\ImageProcessing\\ImageProcessing\\ImageProcessing\\basic.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E0C79A06-9C10-40FD-956B-9C9B227F57BF}|ImageProcessing\\ImageProcessing.vcxproj|solutionrelative:ImageProcessing\\basic.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E0C79A06-9C10-40FD-956B-9C9B227F57BF}|ImageProcessing\\ImageProcessing.vcxproj|D:\\USTC\\Program\\ImageProcessing\\ImageProcessing\\ImageProcessing\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{E0C79A06-9C10-40FD-956B-9C9B227F57BF}|ImageProcessing\\ImageProcessing.vcxproj|solutionrelative:ImageProcessing\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0C79A06-9C10-40FD-956B-9C9B227F57BF}|ImageProcessing\\ImageProcessing.vcxproj|D:\\USTC\\Program\\ImageProcessing\\ImageProcessing\\ImageProcessing\\task.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E0C79A06-9C10-40FD-956B-9C9B227F57BF}|ImageProcessing\\ImageProcessing.vcxproj|solutionrelative:ImageProcessing\\task.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,8 +26,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "basic.c",
+              "DocumentMoniker": "D:\\USTC\\Program\\ImageProcessing\\ImageProcessing\\ImageProcessing\\basic.c",
+              "RelativeDocumentMoniker": "ImageProcessing\\basic.c",
+              "ToolTip": "D:\\USTC\\Program\\ImageProcessing\\ImageProcessing\\ImageProcessing\\basic.c*",
+              "RelativeToolTip": "ImageProcessing\\basic.c*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-11-28T04:39:50.818Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -32,20 +49,20 @@
               "RelativeDocumentMoniker": "ImageProcessing\\task1.c",
               "ToolTip": "D:\\USTC\\Program\\ImageProcessing\\ImageProcessing\\ImageProcessing\\task1.c*",
               "RelativeToolTip": "ImageProcessing\\task1.c*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2025-11-27T14:34:13.337Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "task.h",
               "DocumentMoniker": "D:\\USTC\\Program\\ImageProcessing\\ImageProcessing\\ImageProcessing\\task.h",
               "RelativeDocumentMoniker": "ImageProcessing\\task.h",
               "ToolTip": "D:\\USTC\\Program\\ImageProcessing\\ImageProcessing\\ImageProcessing\\task.h",
               "RelativeToolTip": "ImageProcessing\\task.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAACzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-11-27T14:33:14.172Z",
               "EditorCaption": ""
@@ -58,7 +75,7 @@
               "RelativeDocumentMoniker": "ImageProcessing\\main.c",
               "ToolTip": "D:\\USTC\\Program\\ImageProcessing\\ImageProcessing\\ImageProcessing\\main.c",
               "RelativeToolTip": "ImageProcessing\\main.c",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAACAAAAAAAAAA==",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAAEEAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2025-11-26T13:11:55.535Z",
               "EditorCaption": ""

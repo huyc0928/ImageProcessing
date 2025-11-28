@@ -1,30 +1,5 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include "task.h"
-void task1(unsigned char* image, unsigned char* output, int width, int height, int channels) {
-	double originrow, origincolumn;//原图像位置
-	double angle;//旋转的角度
-	int centrerow, centrecolumn;
-	int ctrl;
-	printf("输入旋转的角度（角度制）：\n");
-	scanf("%lf", &angle);
-	printf("输入旋转中心的坐标（行和列）：\n");
-	scanf("%d %d", &centrerow, &centrecolumn);
-	printf("选择插值法：\n1-最近邻插值法\n2-双线性插值法\n");
-	scanf("%d", &ctrl);
-	angle = angle * PI / 180.0;//角度制转弧度制
-	for (int i = 0; i < width * height; i++) {
-		int row = i / width;
-		int column = i % width;
-		originrow = cos(angle) * (row - centrerow) - sin(angle) * (column - centrecolumn) + centrerow;
-		origincolumn = sin(angle) * (row - centrerow) + cos(angle) * (column - centrecolumn) + centrecolumn;
-		switch (ctrl) {
-		case 1://最近邻插值法
-			nearestNeighbor(image, output, i, round(originrow) * width + round(origincolumn), width, height);
-			break;
-		}
-	}//按照要求，旋转只针对黑白图像进行处理
-}//图像的平移旋转和放缩
-
 void nearestNeighbor(unsigned char* image, unsigned char* output, int i, int origini, int width, int height) {
 	if (origini >= width * height || origini < 0) {
 		output[i] = 0;//边界处理
@@ -34,6 +9,25 @@ void nearestNeighbor(unsigned char* image, unsigned char* output, int i, int ori
 	}
 }//最近邻插值法
 
-double distance(double x1, double y1, double x2, double y2) {
-	return sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2));
-}
+void bilinearNeighbor(unsigned char* image, unsigned char* output, int row, int column, double originrow, double origincolumn, int width, int height, int newWidth, int newHeight) {
+	if (trans(originrow, origincolumn, width) >= width * height || trans(originrow, origincolumn, width) < 0) {
+		output[trans(row, column, newWidth)] = 0;//边界处理
+	}
+	else {
+		int f_a = image[trans((int)originrow, (int)origincolumn, width)];
+		int f_b = image[trans((int)originrow, (int)origincolumn + 1, width)];
+		int f_c = image[trans((int)originrow + 1, (int)origincolumn, width)];
+		int f_d = image[trans((int)originrow + 1, (int)origincolumn + 1, width)];
+		double f_e = (originrow - (int)originrow) * (f_c - f_a) + f_c;
+		double f_f = (originrow - (int)originrow) * (f_d - f_b) + f_b;
+		double f_xy = (origincolumn - (int)origincolumn) * (f_f - f_e) + f_e;
+		if (f_xy > 255) {
+			f_xy = 255;
+		}
+		else if(f_xy < 0) {
+			f_xy = 0;
+		}
+		output[trans(row, column, newWidth)] = f_xy;
+	}
+}//双线性插值法
+
