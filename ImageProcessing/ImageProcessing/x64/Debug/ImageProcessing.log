@@ -1,9 +1,8 @@
-﻿  basic.c
-  task1.c
-D:\USTC\Program\ImageProcessing\ImageProcessing\ImageProcessing\task1.c(13,12): warning C4244: “函数”: 从“double”转换到“int”，可能丢失数据
-D:\USTC\Program\ImageProcessing\ImageProcessing\ImageProcessing\task1.c(13,23): warning C4244: “函数”: 从“double”转换到“int”，可能丢失数据
-D:\USTC\Program\ImageProcessing\ImageProcessing\ImageProcessing\task1.c(13,71): warning C4244: “函数”: 从“double”转换到“int”，可能丢失数据
-D:\USTC\Program\ImageProcessing\ImageProcessing\ImageProcessing\task1.c(13,82): warning C4244: “函数”: 从“double”转换到“int”，可能丢失数据
-D:\USTC\Program\ImageProcessing\ImageProcessing\ImageProcessing\task1.c(30,42): warning C4244: “=”: 从“double”转换到“unsigned char”，可能丢失数据
+﻿  main.c
+D:\USTC\Program\ImageProcessing\ImageProcessing\ImageProcessing\main.c(43,65): warning C4244: “函数”: 从“double”转换到“int”，可能丢失数据
+D:\USTC\Program\ImageProcessing\ImageProcessing\ImageProcessing\main.c(67,65): warning C4244: “函数”: 从“double”转换到“int”，可能丢失数据
+  task2.c
+D:\USTC\Program\ImageProcessing\ImageProcessing\ImageProcessing\task2.c(6,2): warning C4013: “memset”未定义；假设外部返回 int
+D:\USTC\Program\ImageProcessing\ImageProcessing\ImageProcessing\task2.c(17,2): warning C4013: “stbi_write_jpg”未定义；假设外部返回 int
   正在生成代码...
   ImageProcessing.vcxproj -> D:\USTC\Program\ImageProcessing\ImageProcessing\x64\Debug\ImageProcessing.exe

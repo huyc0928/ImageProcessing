@@ -11,7 +11,7 @@ int main()
 {
 	int width, height, channels;
 	int newWidth, newHeight;
-	unsigned char* image = stbi_load("D:\\USTC\\Program\\ImageProcessing\\ImageProcessing\\TestData\\alphabet1.jpg", &width, &height, &channels, 1);//读入图像用的函数
+	unsigned char* image = stbi_load("D:\\USTC\\Program\\ImageProcessing\\ImageProcessing\\TestData\\lena.jpg", &width, &height, &channels, 1);//读入图像用的函数
 	unsigned char* output = NULL;
 	int ctrl;
 	printf("要进行何种操作？\n1-图像的平移旋转和放缩\n2-图像的直方图均衡化\n3-图像的空间域滤波去噪\n4-彩色图像的K-means算法有损压缩\n5-图像的频率域滤波\n6-图像的四叉树分裂合并算法\n");
@@ -73,7 +73,30 @@ int main()
 			}
 		}//放缩
 	}//图像的平移旋转和放缩
-	stbi_write_jpg("D:\\USTC\\Program\\ImageProcessing\\ImageProcessing\\TestData\\task1.jpg", newWidth, newHeight, 1, output, 100);//写出函数的图像
+	else if (ctrl == 2) {
+		int originHist[256] = { 0 };//原图像的灰度值
+		generateHist(image, originHist, width, height);//计算原图像的灰度值
+		histogram(originHist);//绘制原图像的直方图
+		newWidth = width;
+		newHeight = height;
+		output = (unsigned char*)malloc(newWidth * newHeight * channels);
+		equalization(image, output, originHist, width, height);//图像均衡化
+		int newHist[256] = { 0 };//均衡化后的灰度值
+		generateHist(output, newHist, newWidth, newHeight);//计算均衡化后的灰度值
+		histogram(newHist);//绘制均衡化后的直方图
+	}//图像的直方图均衡化
+	else if (ctrl == 3) {
+
+	}//图像的空间域滤波去噪
+	else if (ctrl == 4) {
+	}//彩色图像的K-means算法有损压缩
+	else if (ctrl == 5) {
+
+	}//图像的频率域滤波
+	else if (ctrl == 6) {
+
+	}//图像的四叉树分裂合并算法
+	stbi_write_jpg("D:\\USTC\\Program\\ImageProcessing\\ImageProcessing\\TestData\\lena1.jpg", newWidth, newHeight, 1, output, 100);//写出函数的图像
 	stbi_image_free(image);
 	free(output);//释放内存的函数
 	return 0;

@@ -126,6 +126,7 @@
     <ClCompile Include="basic.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="task1.c" />
+    <ClCompile Include="task2.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="task.h" />

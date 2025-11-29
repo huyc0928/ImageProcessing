@@ -24,6 +24,9 @@
     <ClCompile Include="basic.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="task2.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="task.h">
