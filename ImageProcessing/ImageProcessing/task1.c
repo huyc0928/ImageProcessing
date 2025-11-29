@@ -18,7 +18,7 @@ void bilinearNeighbor(unsigned char* image, unsigned char* output, int row, int 
 		int f_b = image[trans((int)originrow, (int)origincolumn + 1, width)];
 		int f_c = image[trans((int)originrow + 1, (int)origincolumn, width)];
 		int f_d = image[trans((int)originrow + 1, (int)origincolumn + 1, width)];
-		double f_e = (originrow - (int)originrow) * (f_c - f_a) + f_c;
+		double f_e = (originrow - (int)originrow) * (f_c - f_a) + f_a;
 		double f_f = (originrow - (int)originrow) * (f_d - f_b) + f_b;
 		double f_xy = (origincolumn - (int)origincolumn) * (f_f - f_e) + f_e;
 		if (f_xy > 255) {
