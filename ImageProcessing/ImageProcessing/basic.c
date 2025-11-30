@@ -4,9 +4,13 @@ int trans(int row, int column, int width) {
 	return row * width + column;
 }//将二维坐标转换为一维坐标
 
-double distance(double x1, double y1, double x2, double y2) {
-	return sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2));
-}//计算两点间距离的函数
+double distance(double coordinate[][2],int dim) {
+	double sum = 0;
+	for (int i = 0; i < dim; i++) {
+		sum += (coordinate[i][0] - coordinate[i][1]) * (coordinate[i][0] - coordinate[i][1]);
+	}
+	return sqrt(sum);
+}//计算距离的函数
 
 int median(int arr[], int n) {
 	for (int i = 0; i < n - 1; i++) {
@@ -20,3 +24,7 @@ int median(int arr[], int n) {
 	}
 	return arr[(n - 1) / 2];
 }
+
+int transRGB(int row, int column, int width, int channel) {
+	return (row * width + column) * 3 + channel;
+}//将二维坐标转换为一维坐标（RGB图像）

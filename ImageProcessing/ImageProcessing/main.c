@@ -122,6 +122,18 @@ int main()
 		}
 	}//图像的空间域滤波去噪
 	else if (ctrl == 4) {
+		int K;//K值
+		printf("输入K值：\n");
+		scanf("%d", &K);
+		newWidth = width;
+		newHeight = height;
+		output = (unsigned char*)malloc(newWidth * newHeight * channels);
+		unsigned char* temp0 = (unsigned char*)malloc(K * 3 * 2);
+		unsigned char* temp1 = (unsigned char*)malloc(K * 3 * 2);
+		randChoose(image, temp0, width, height, K);
+		do {
+
+		} while (!convergence(temp0, temp1, K, width, height));
 	}//彩色图像的K-means算法有损压缩
 	else if (ctrl == 5) {
 
@@ -129,7 +141,7 @@ int main()
 	else if (ctrl == 6) {
 
 	}//图像的四叉树分裂合并算法
-	stbi_write_jpg("D:\\USTC\\Program\\ImageProcessing\\ImageProcessing\\TestData\\lena_random_4.jpg", newWidth, newHeight, 1, output, 100);//写出函数的图像
+	stbi_write_jpg("D:\\USTC\\Program\\ImageProcessing\\ImageProcessing\\TestData\\lena_random_4.jpg", newWidth, newHeight, 3, output, 100);//写出函数的图像
 	stbi_image_free(image);
 	free(output);//释放内存的函数
 	return 0;
