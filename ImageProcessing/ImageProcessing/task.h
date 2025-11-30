@@ -19,3 +19,10 @@ void histogram(int hist[]);
 void generateHist(unsigned char* image, int* hist, int width, int height);
 //图像均衡化函数
 void equalization(unsigned char* image, unsigned char* output, int* originHist, int width, int height);
+
+//均值滤波函数
+int averageFilter(unsigned char* image, int row, int column, int width, int height, int filterSize);
+//中位数计算函数
+int median(int arr[], int n);
+//中值滤波函数
+int medianFilter(unsigned char* image, int row, int column, int width, int height, int filterSize);

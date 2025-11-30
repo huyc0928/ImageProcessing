@@ -30,4 +30,3 @@ void bilinearNeighbor(unsigned char* image, unsigned char* output, int row, int 
 		output[trans(row, column, newWidth)] = f_xy;
 	}
 }//双线性插值法
-

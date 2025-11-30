@@ -11,7 +11,7 @@ int main()
 {
 	int width, height, channels;
 	int newWidth, newHeight;
-	unsigned char* image = stbi_load("D:\\USTC\\Program\\ImageProcessing\\ImageProcessing\\TestData\\blood.jpg", &width, &height, &channels, 1);//读入图像用的函数
+	unsigned char* image = stbi_load("D:\\USTC\\Program\\ImageProcessing\\ImageProcessing\\TestData\\lena_random.jpg", &width, &height, &channels, 1);//读入图像用的函数
 	unsigned char* output = NULL;
 	int ctrl;
 	printf("要进行何种操作？\n1-图像的平移旋转和放缩\n2-图像的直方图均衡化\n3-图像的空间域滤波去噪\n4-彩色图像的K-means算法有损压缩\n5-图像的频率域滤波\n6-图像的四叉树分裂合并算法\n");
@@ -86,7 +86,40 @@ int main()
 		histogram(newHist);//绘制均衡化后的直方图
 	}//图像的直方图均衡化
 	else if (ctrl == 3) {
-
+		printf("1-超限邻域均值滤波\n2-超限邻域中值滤波\n3-普通均值滤波\n4-普通中值滤波\n");
+		scanf("%d", &ctrl);
+		int filterSize, T = 0;
+		printf("输入邻域大小（奇数）：\n");
+		scanf("%d", &filterSize);
+		if (ctrl == 1 || ctrl == 2) {
+			printf("输入阈值大小：\n");
+			scanf("%d", &T);
+		}
+		newWidth = width;
+		newHeight = height;
+		output = (unsigned char*)malloc(newWidth * newHeight * channels);
+		for (int row = 0; row < height; row++) {
+			for (int column = 0; column < width; column++) {
+				if (ctrl == 1 || ctrl == 3) {
+					int ave = averageFilter(image, row, column, width, height, filterSize);
+					if (abs(image[trans(row, column, width)] - ave) > T) {
+						output[trans(row, column, width)] = ave;
+					}
+					else {
+						output[trans(row, column, width)] = image[trans(row, column, width)];
+					}
+				}//（超限邻域）均值滤波
+				else if (ctrl == 2 || ctrl == 4) {
+					int mid = medianFilter(image, row, column, width, height, filterSize);
+					if (abs(image[trans(row, column, width)] - mid) > T) {
+						output[trans(row, column, width)] = mid;
+					}
+					else {
+						output[trans(row, column, width)] = image[trans(row, column, width)];
+					}
+				}//（超限邻域）中值滤波
+			}
+		}
 	}//图像的空间域滤波去噪
 	else if (ctrl == 4) {
 	}//彩色图像的K-means算法有损压缩
@@ -96,7 +129,7 @@ int main()
 	else if (ctrl == 6) {
 
 	}//图像的四叉树分裂合并算法
-	stbi_write_jpg("D:\\USTC\\Program\\ImageProcessing\\ImageProcessing\\TestData\\task1_2_2.jpg", newWidth, newHeight, 1, output, 100);//写出函数的图像
+	stbi_write_jpg("D:\\USTC\\Program\\ImageProcessing\\ImageProcessing\\TestData\\lena_random_4.jpg", newWidth, newHeight, 1, output, 100);//写出函数的图像
 	stbi_image_free(image);
 	free(output);//释放内存的函数
 	return 0;
